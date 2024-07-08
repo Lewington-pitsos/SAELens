@@ -1,0 +1,28 @@
+Loaded pretrained model gelu-1l into HookedTransformer
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Time taken to get 1004 batches: 4.52 seconds
+Batches Per Second: 222.29 batches per second
+Samples Per Second: 28,452.728784754167 samples per second
+Tokens Per Second: 29,135,594.275588267 tokens per second
+----------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                              Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+----------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                     ProfilerStep*        51.81%        2.150s       100.00%        4.149s       4.145ms       0.000us         0.00%      13.244ms      13.231us          1001  
+                  aten::pin_memory         0.18%       7.331ms        33.64%        1.396s       1.396ms       0.000us         0.00%     985.000us       0.985us          1000  
+                       aten::copy_        26.38%        1.095s        29.00%        1.203s     601.677us      11.291ms       100.00%      11.780ms       5.890us          2000  
+                 aten::_pin_memory         4.67%     193.789ms        28.77%        1.194s       1.194ms       0.000us         0.00%     497.000us       0.497us          1000  
+                          aten::to         0.10%       3.985ms        14.38%     596.509ms     596.509us       0.000us         0.00%      11.665ms      11.665us          1000  
+                    aten::_to_copy         4.49%     186.152ms        14.29%     592.972ms     592.972us       0.000us         0.00%      11.770ms      11.770us          1000  
+                   aten::is_pinned         4.65%     192.892ms         4.73%     196.320ms     196.320us       0.000us         0.00%     488.000us       0.488us          1000  
+               aten::empty_strided         4.72%     196.056ms         4.72%     196.056ms     196.056us       0.000us         0.00%       0.000us       0.000us          1000  
+                   cudaMemcpyAsync         2.62%     108.679ms         2.62%     108.679ms     108.679us     489.000us         4.33%     489.000us       0.489us          1000  
+                    cudaEventQuery         0.12%       4.972ms         0.12%       4.972ms       4.972us     497.000us         4.40%     497.000us       0.497us          1000  
+----------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.149s
+Self CUDA time total: 11.291ms
+

@@ -1,0 +1,5 @@
+Loaded pretrained model gelu-1l into HookedTransformer
+Time taken to get 1000 batches: 16.95 seconds
+Batches Per Second: 59.01 batches per second
+Samples Per Second: 7,553.655272396556 samples per second
+Tokens Per Second: 7,734,942.998934073 tokens per second

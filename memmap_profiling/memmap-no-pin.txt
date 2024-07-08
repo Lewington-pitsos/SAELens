@@ -1,0 +1,28 @@
+Loaded pretrained model gelu-1l into HookedTransformer
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Warning: could not find a buffer file research/data/16.dat for the next buffer index 16, resetting index to 0.
+Time taken to get 1000 batches: 0.39 seconds
+Batches Per Second: 2538.15 batches per second
+Samples Per Second: 649,766.1574397656 samples per second
+Tokens Per Second: 665,360,545.21832 tokens per second
+------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                       ProfilerStep*        48.92%     151.149ms        99.99%     308.949ms     309.879us       0.000us         0.00%      22.787ms      22.856us           997  
+                            aten::to         3.71%      11.454ms        47.60%     147.066ms     147.657us       0.000us         0.00%      21.282ms      21.367us           996  
+                      aten::_to_copy         2.10%       6.501ms        47.00%     145.210ms     145.793us       0.000us         0.00%      22.767ms      22.858us           996  
+                         aten::copy_         4.09%      12.645ms        40.40%     124.834ms     125.335us      19.756ms       100.00%      22.787ms      22.879us           996  
+                     cudaMemcpyAsync        28.96%      89.466ms        28.96%      89.466ms      89.825us       1.524ms         7.71%       1.524ms       1.530us           996  
+               cudaStreamSynchronize         7.35%      22.723ms         7.35%      22.723ms      22.814us       1.507ms         7.63%       1.507ms       1.513us           996  
+                 aten::empty_strided         4.53%      14.008ms         4.53%      14.008ms      14.064us       0.000us         0.00%       0.000us       0.000us           996  
+                    aten::lift_fresh         0.32%       1.003ms         0.32%       1.003ms       1.007us       0.000us         0.00%       0.000us       0.000us           996  
+               cudaDeviceSynchronize         0.01%      17.000us         0.01%      17.000us      17.000us       0.000us         0.00%       0.000us       0.000us             1  
+    Memcpy HtoD (Pageable -> Device)         0.00%       0.000us         0.00%       0.000us       0.000us      19.756ms       100.00%      19.756ms      19.835us           996  
+------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 308.966ms
+Self CUDA time total: 19.756ms
+

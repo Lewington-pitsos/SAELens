@@ -1,0 +1,22 @@
+Loaded pretrained model gelu-1l into HookedTransformer
+Time taken to get 1004 batches: 27.98 seconds
+Batches Per Second: 35.88 batches per second
+Samples Per Second: 4,593.246071351333 samples per second
+Tokens Per Second: 4,703,483.977063765 tokens per second
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                          ProfilerStep*         1.50%     398.527ms       100.00%       26.589s      26.563ms       0.000us         0.00%        3.351s       3.347ms          1001  
+enumerate(DataLoader)#_SingleProcessDataLoaderIter._...        63.53%       16.893s        89.80%       23.878s      23.735ms       0.000us         0.00%        1.091s       1.085ms          1006  
+                                           aten::select        18.46%        4.910s        18.68%        4.968s       1.213us       0.000us         0.00%       0.000us       0.000us       4096006  
+                                            aten::copy_         0.00%     487.000us         8.16%        2.170s     120.541ms        2.185s        65.27%        2.185s     121.383ms            18  
+                                               aten::to         0.00%      63.000us         8.16%        2.170s     120.541ms       0.000us         0.00%        2.164s     120.200ms            18  
+                                         aten::_to_copy         0.00%     171.000us         8.16%        2.170s     180.806ms       0.000us         0.00%        2.164s     180.300ms            12  
+                                        cudaMemcpyAsync         8.16%        2.169s         8.16%        2.169s     180.715ms       0.000us         0.00%       0.000us       0.000us            12  
+                                            aten::stack         1.49%     396.118ms         6.70%        1.782s       1.782ms       0.000us         0.00%        1.091s       1.091ms          1000  
+                                              aten::cat         4.76%        1.267s         5.21%        1.385s       1.376ms        1.122s        33.53%        1.126s       1.119ms          1006  
+                                         aten::randperm         1.41%     375.876ms         2.83%     751.897ms      20.886ms       0.000us         0.00%       0.000us       0.000us            36  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 26.589s
+Self CUDA time total: 3.347s
+
